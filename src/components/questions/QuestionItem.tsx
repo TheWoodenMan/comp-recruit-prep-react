@@ -11,23 +11,24 @@ const QuestionItem: React.FC<QuestionItemPropTypes> = ({
 	};
 	return _id ? (
 		<React.Fragment>
-			<div className="card shadow-md compact side bg-base-100">
+			<div className="card shadow-md compact side bg-base-100 p-2 mt-3">
 				<div className="flex-row items-center space-x-4 card-body">
-					<div>
+					<div className="flex flex-col justify-between">
 						<h2 className="card-title">{question}</h2>
-						<a
-							className="text-base-content text-opacity-40"
-							onClick={handleClick}
-							style={{ cursor: "pointer" }}
-						>
-							Customise
-						</a>
-						<div>
+
+						<div className="mt-3">
 							{values[0] &&
 								values.map((value: string, i: number) => (
 									<Chip className="m-1" value={value} key={`${_id}` + `${i}`} />
 								))}
 						</div>
+						<a
+							className="text-base-content text-opacity-40 justify-self-end"
+							onClick={handleClick}
+							style={{ cursor: "pointer" }}
+						>
+							Edit
+						</a>
 					</div>
 				</div>
 			</div>

@@ -36,36 +36,34 @@ const QuestionSearch = () => {
 
 	return (
 		<div className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 mb-8 mt-5 gap-8">
-			<div className="ml-10 w-100">
+			<div>
 				<form action="submit" onSubmit={handleSubmit}>
 					<div className="form-control">
-						<div className="relative flex flex-col md:flex-row">
+						<div className="flex flex-col md:flex-row md-w-5/6">
 							<Input
 								label="Search by value"
-								className="mr-2"
+								className="input"
 								value={text}
 								onChange={handleChange}
 							/>
 							<Button
 								type="submit"
-								className="absolute top-0 rounded-r-lg right-0 w-25 btn btn-lg mt-5 ml-5 md:mt-0"
+								className="btn btn-lg mt-5 md:mt-0 md:ml-5 "
 							>
 								Submit
 							</Button>
+							{questions && questions.length > 0 && (
+								<button
+									onClick={() => dispatch({ type: "CLEAR_QUESTIONS" })}
+									className="btn btn-ghost btn-lg mt-5 md:mt-0 md:ml-5"
+								>
+									Clear
+								</button>
+							)}
 						</div>
 					</div>
 				</form>
 			</div>
-			{questions && questions.length > 0 && (
-				<div>
-					<button
-						onClick={() => dispatch({ type: "CLEAR_QUESTIONS" })}
-						className="btn btn-ghost btn-lg"
-					>
-						Clear
-					</button>
-				</div>
-			)}
 		</div>
 	);
 };
