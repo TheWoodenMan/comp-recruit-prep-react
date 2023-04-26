@@ -25,7 +25,7 @@ const QuestionItem: React.FC<QuestionItemPropTypes> = ({
 						<div>
 							{values[0] &&
 								values.map((value: string, i: number) => (
-									<Chip value={value} key={`${_id}` + `${i}`} />
+									<Chip className="m-1" value={value} key={`${_id}` + `${i}`} />
 								))}
 						</div>
 					</div>

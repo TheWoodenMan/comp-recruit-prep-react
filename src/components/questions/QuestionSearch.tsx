@@ -36,10 +36,10 @@ const QuestionSearch = () => {
 
 	return (
 		<div className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 mb-8 mt-5 gap-8">
-			<div>
+			<div className="ml-10 w-100">
 				<form action="submit" onSubmit={handleSubmit}>
-					<div className="form-control flex flex-col">
-						<div className="relative">
+					<div className="form-control">
+						<div className="relative flex flex-col md:flex-row">
 							<Input
 								label="Search by values"
 								value={text}
@@ -47,7 +47,7 @@ const QuestionSearch = () => {
 							/>
 							<Button
 								type="submit"
-								className="absolute top-0 right-0 w-36 btn btn-lg mt-5 md:mt-0"
+								className="absolute top-0 right-0 w-36 btn btn-lg mt-5 ml-3 md:mt-0"
 							>
 								Submit
 							</Button>
