@@ -41,13 +41,14 @@ const QuestionSearch = () => {
 					<div className="form-control">
 						<div className="relative flex flex-col md:flex-row">
 							<Input
-								label="Search by values"
+								label="Search by value"
+								className="mr-2"
 								value={text}
 								onChange={handleChange}
 							/>
 							<Button
 								type="submit"
-								className="absolute top-0 right-0 w-36 btn btn-lg mt-5 ml-3 md:mt-0"
+								className="absolute top-0 rounded-r-lg right-0 w-25 btn btn-lg mt-5 ml-5 md:mt-0"
 							>
 								Submit
 							</Button>
