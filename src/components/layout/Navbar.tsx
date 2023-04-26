@@ -7,7 +7,6 @@ import {
 	IconButton
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
-import { Router, BrowserRouter } from "react-router-dom";
 
 export default function Example() {
 	const [openNav, setOpenNav] = useState(false);
@@ -21,24 +20,14 @@ export default function Example() {
 
 	const navList = (
 		<ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-			<Link to={"/"}>
-				<Typography
-					as="li"
-					variant="small"
-					color="blue-gray"
-					className="p-1 font-normal"
-				>
-					<a className="flex items-center">About</a>
-				</Typography>
-			</Link>
 			<Typography
 				as="li"
 				variant="small"
 				color="blue-gray"
 				className="p-1 font-normal"
 			>
-				<a href="#" className="flex items-center">
-					Login
+				<a href="/about" className="flex items-center">
+					About
 				</a>
 			</Typography>
 			<Typography
@@ -47,7 +36,17 @@ export default function Example() {
 				color="blue-gray"
 				className="p-1 font-normal"
 			>
-				<a href="#" className="flex items-center">
+				<a href="/search" className="flex items-center">
+					Search
+				</a>
+			</Typography>
+			<Typography
+				as="li"
+				variant="small"
+				color="blue-gray"
+				className="p-1 font-normal"
+			>
+				<a href="/signup" className="flex items-center">
 					SignUp
 				</a>
 			</Typography>
@@ -57,7 +56,7 @@ export default function Example() {
 				color="blue-gray"
 				className="p-1 font-normal"
 			>
-				<a href="#" className="flex items-center mr-5">
+				<a href="docs" className="flex items-center mr-5">
 					Docs
 				</a>
 			</Typography>
@@ -77,7 +76,7 @@ export default function Example() {
 				</Typography>
 				<div className="hidden lg:block">{navList}</div>
 				<Button variant="gradient" size="sm" className="hidden lg:inline-block">
-					<span>Buy Now</span>
+					<span>Login</span>
 				</Button>
 				<IconButton
 					variant="text"
