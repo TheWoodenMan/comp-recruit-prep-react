@@ -35,7 +35,7 @@ const QuestionSearch = () => {
 	};
 
 	return (
-		<div className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 mb-8 mt-5 gap-8">
+		<div className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 mb-8 mt-5 gap-8 ml-8">
 			<div>
 				<form action="submit" onSubmit={handleSubmit}>
 					<div className="form-control">
@@ -48,7 +48,7 @@ const QuestionSearch = () => {
 							/>
 							<Button
 								type="submit"
-								className="btn btn-lg mt-5 md:mt-0 md:ml-5 "
+								className="btn btn-lg mt-5 md:mt-0 md:mx-5 md:pr-5 "
 							>
 								Submit
 							</Button>

@@ -10,7 +10,7 @@ function App() {
 		<React.Fragment>
 			<APIProvider>
 				<AlertProvider>
-					<Page title={"Comp Recruitment Prepper"}>
+					<Page title={"Competency Recruitment Prepper"}>
 						<AppRouter />
 					</Page>
 				</AlertProvider>

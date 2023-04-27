@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Header from "./Header";
 import Footer from "./Footer";
 import Alert from "./Alert";
 import AlertContext from "../../context/alert/AlertContext";
@@ -16,8 +16,8 @@ const Page: React.FC<PageProps> = ({ children }) => {
 
 	return (
 		<React.Fragment>
-			<Navbar />
-			<main className="container mx-auto px-3 pb-12 h-5/6">
+			<Header />
+			<main className="container mx-auto px-3 pb-12 bg-slate-500 h-4/6">
 				{alert && <Alert />}
 				{children}
 			</main>

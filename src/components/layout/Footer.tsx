@@ -1,9 +1,10 @@
 import { Typography } from "@material-tailwind/react";
-import { SiGunicorn } from "react-icons/si";
+import { SiGunicorn, SiTelegraph } from "react-icons/si";
+import { FaTwitterSquare, FaGithub } from "react-icons/fa";
 
 export default function Footer() {
 	return (
-		<footer className="w-full bg-white p-8">
+		<footer className="w-full p-8">
 			<div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 bg-white text-center md:justify-between">
 				<SiGunicorn
 					stroke={{ color: "blue-gray" }}
@@ -20,7 +21,8 @@ export default function Footer() {
 							About Us
 						</Typography>
 					</li>
-					<li>
+					<li className="flex">
+						<FaTwitterSquare className="mr-1 mt-1" />
 						<Typography
 							as="a"
 							href="https://twitter.com/Andynwood79"
@@ -30,7 +32,8 @@ export default function Footer() {
 							Twitter
 						</Typography>
 					</li>
-					<li>
+					<li className="flex">
+						<FaGithub className="mr-1 mt-1" />
 						<Typography
 							as="a"
 							href="https://github.com/TheWoodenMan/comp-recruit-prep-react"
@@ -40,7 +43,8 @@ export default function Footer() {
 							Contribute
 						</Typography>
 					</li>
-					<li>
+					<li className="flex">
+						<SiTelegraph className="mr-1 mt-1" />
 						<Typography
 							as="a"
 							href="https://twm-business-card.netlify.app/"
