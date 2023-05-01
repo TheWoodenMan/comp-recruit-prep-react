@@ -10,7 +10,7 @@ const Alert: React.FC = () => {
 		<div
 			className={
 				alert.type === "error"
-					? "flex items-start mb-4 px-2 py-2 mt-5 bg-red-300 rounded space-x-2 alert alert-warning shadow-lg text-base-300"
+					? "flex items-start mb-4 px-2 py-2 mt-5 bg-red-300/50 rounded space-x-2 alert alert-warning shadow-lg text-base-300"
 					: ""
 			}
 		>

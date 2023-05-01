@@ -48,7 +48,7 @@ const QuestionSearch = () => {
 							/>
 							<Button
 								type="submit"
-								className="btn btn-lg mt-5 md:mt-0 md:mx-5 md:pr-5 "
+								className="btn btn-lg mt-5 md:mt-0 md:mx-5 md:pr-5 lg:pr-10"
 							>
 								Submit
 							</Button>

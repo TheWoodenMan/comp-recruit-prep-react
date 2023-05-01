@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import {
+	Avatar,
 	Navbar,
 	MobileNav,
 	Typography,
@@ -7,6 +8,7 @@ import {
 	IconButton
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
+import react from "../../assets/react.svg";
 
 export default function Example() {
 	const [openNav, setOpenNav] = useState(false);
@@ -58,6 +60,32 @@ export default function Example() {
 			>
 				<a href="docs" className="flex items-center mr-5">
 					Docs
+				</a>
+			</Typography>
+			<Typography
+				as="li"
+				variant="small"
+				color="blue-gray"
+				className="p-1 font-normal"
+			>
+				<span className="flex items-center mr-1">Username</span>
+			</Typography>
+			<Avatar
+				alt="avatar"
+				className="flex items-center mr-1 font-normal"
+				size="sm"
+				variant="circular"
+				color="blue-gray"
+				src={react}
+			/>
+			<Typography
+				as="li"
+				variant="small"
+				color="blue-gray"
+				className="p-1 font-normal"
+			>
+				<a href="logout" className="flex items-center mr-3">
+					Logout
 				</a>
 			</Typography>
 		</ul>
