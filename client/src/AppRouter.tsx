@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
 import { useContext } from "react";
 import Search from "./pages/Search";
 import About from "./pages/About";
@@ -20,12 +20,12 @@ const AppRouter = () => {
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/search" element={user ? <Home /> : <Search />} />
+				<Route path="/search" element={<Search />} />
 				<Route path="/about" element={<About />} />
 				<Route path="/signup" element={<SignUp />} />
-				<Route path="/question:id" element={<Question />} />
+				<Route path="/question/:id" element={user ? <Question /> : <Login />} />
 				<Route path="/docs" element={<Docs />} />
-				<Route path="/login" element={user ? <Search /> : <Login />} />
+				<Route path="/login" element={<Login />} />
 			</Routes>
 		</BrowserRouter>
 	);

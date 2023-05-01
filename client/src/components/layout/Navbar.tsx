@@ -38,18 +38,16 @@ export default function Example() {
 					About
 				</a>
 			</Typography>
-			{user && (
-				<Typography
-					as="li"
-					variant="small"
-					color="blue-gray"
-					className="p-1 font-normal"
-				>
-					<a href="/search" className="flex items-center">
-						Search
-					</a>
-				</Typography>
-			)}
+			<Typography
+				as="li"
+				variant="small"
+				color="blue-gray"
+				className="p-1 font-normal"
+			>
+				<a href="/search" className="flex items-center">
+					Search
+				</a>
+			</Typography>
 			<Typography
 				as="li"
 				variant="small"
