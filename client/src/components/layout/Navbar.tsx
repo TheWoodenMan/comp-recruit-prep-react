@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import React from "react";
 import {
 	Avatar,
@@ -8,9 +8,15 @@ import {
 	Button,
 	IconButton
 } from "@material-tailwind/react";
-import react from "../../components/layout/assets/react.svg";
+
+import UserContext from "../../context/user/UserContext";
 
 export default function Example() {
+	const UserSearchContext = useContext(UserContext);
+
+	const { user, avatar_url, username } = UserSearchContext;
+	console.log(avatar_url);
+
 	const [openNav, setOpenNav] = useState(false);
 
 	useEffect(() => {
@@ -32,16 +38,18 @@ export default function Example() {
 					About
 				</a>
 			</Typography>
-			<Typography
-				as="li"
-				variant="small"
-				color="blue-gray"
-				className="p-1 font-normal"
-			>
-				<a href="/search" className="flex items-center">
-					Search
-				</a>
-			</Typography>
+			{user && (
+				<Typography
+					as="li"
+					variant="small"
+					color="blue-gray"
+					className="p-1 font-normal"
+				>
+					<a href="/search" className="flex items-center">
+						Search
+					</a>
+				</Typography>
+			)}
 			<Typography
 				as="li"
 				variant="small"
@@ -68,26 +76,30 @@ export default function Example() {
 				color="blue-gray"
 				className="p-1 font-normal"
 			>
-				<span className="flex items-center mr-1">Username</span>
+				<span className="flex items-center mr-1">{username}</span>
 			</Typography>
-			<Avatar
-				alt="avatar"
-				className="flex items-center mr-1 font-normal"
-				size="sm"
-				variant="circular"
-				color="blue-gray"
-				src={react}
-			/>
-			<Typography
-				as="li"
-				variant="small"
-				color="blue-gray"
-				className="p-1 font-normal"
-			>
-				<a href="logout" className="flex items-center mr-3">
-					Logout
-				</a>
-			</Typography>
+			{avatar_url && (
+				<Avatar
+					alt="avatar"
+					className="flex items-center mr-1 font-normal"
+					size="sm"
+					variant="circular"
+					color="blue-gray"
+					src={avatar_url}
+				/>
+			)}
+			{user && (
+				<Typography
+					as="li"
+					variant="small"
+					color="blue-gray"
+					className="p-1 font-normal"
+				>
+					<a href="logout" className="flex items-center mr-3">
+						Logout
+					</a>
+				</Typography>
+			)}
 		</ul>
 	);
 
@@ -104,7 +116,7 @@ export default function Example() {
 				</Typography>
 				<div className="hidden lg:block">{navList}</div>
 				<Button variant="gradient" size="sm" className="hidden lg:inline-block">
-					<span>Login</span>
+					<a href="login">Login</a>
 				</Button>
 				<IconButton
 					variant="text"

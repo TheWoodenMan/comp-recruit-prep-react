@@ -3,14 +3,15 @@ import { UserContextType } from "./UserContextTypes";
 import { UserProviderProps } from "./UserContextTypes";
 import { UserActionType } from "./UserReducerTypes";
 import UserReducer from "./UserReducer";
+import react from "../../components/layout/assets/react.svg";
 
-const UserContext = createContext<UserContextType | null>(null);
+const UserContext = createContext<UserContextType>({} as UserContextType);
 
 export const UserProvider = ({ children }: UserProviderProps) => {
 	const initialState = {
 		user: false,
 		userName: "",
-		avatar_url: ""
+		avatar_url: react
 	};
 
 	const [state, dispatch] = useReducer<
