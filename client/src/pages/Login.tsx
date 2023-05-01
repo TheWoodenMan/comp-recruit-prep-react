@@ -30,15 +30,15 @@ const Login = () => {
 
 	return (
 		<div>
-			<div className="wrapper flex mt-10 ml-20">
+			<div className="container flex mt-10 ml-20">
 				<div className="left w-96 px-5 py-5 shadow-md">
 					<Button
 						size="lg"
 						variant="outlined"
 						className="icon flex mx-auto mt-3"
 					>
-						<span>Google</span>
-						<FcGoogle className="ml-5 mt-1" />
+						<FcGoogle className="mr-5 mt-1" />
+						<span>Sign in with Google</span>
 					</Button>
 				</div>
 				<div className="right w-50 pr-20 py-5 shadow-md ml-20">
