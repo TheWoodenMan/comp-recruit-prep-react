@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import React from "react";
 import {
 	Avatar,
 	Navbar,
@@ -7,8 +8,7 @@ import {
 	Button,
 	IconButton
 } from "@material-tailwind/react";
-import { Link } from "react-router-dom";
-import react from "../../assets/react.svg";
+import react from "../../components/layout/assets/react.svg";
 
 export default function Example() {
 	const [openNav, setOpenNav] = useState(false);
@@ -148,7 +148,7 @@ export default function Example() {
 				<div className="container mx-auto">
 					{navList}
 					<Button variant="gradient" size="sm" fullWidth className="mb-2">
-						<span>Login</span>
+						<a href="login">Login</a>
 					</Button>
 				</div>
 			</MobileNav>

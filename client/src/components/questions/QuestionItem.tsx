@@ -11,7 +11,7 @@ const QuestionItem: React.FC<QuestionItemPropTypes> = ({
 	};
 	return _id ? (
 		<React.Fragment>
-			<div className="card shadow-md compact side bg-base-100 p-2 mt-3 rounded">
+			<div className="card shadow-md compact side bg-base-100 p-2 mt-3 rounded-lg">
 				<div className="flex-row items-center space-x-4 card-body">
 					<div className="flex flex-col justify-between">
 						<h2 className="card-title">{question}</h2>
