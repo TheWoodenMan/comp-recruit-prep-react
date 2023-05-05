@@ -2,7 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { QuestionItemPropTypes } from "./QuestionItemTypes";
 import { Chip } from "@material-tailwind/react";
-import { Link, redirect } from "react-router-dom";
+import { redirect } from "react-router-dom";
 import AlertContext from "../../context/alert/AlertContext";
 import UserContext from "../../context/user/UserContext";
 
