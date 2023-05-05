@@ -15,14 +15,16 @@ const Page: React.FC<PageProps> = ({ children }) => {
 	const alert = alertContextType?.alert || false;
 
 	return (
-		<div className="h-screen">
-			<Header />
-			<main className="container mx-auto px-3 pb-12 h-4/6">
-				{alert && <Alert />}
-				{children}
-			</main>
+		<React.Fragment>
+			<div className="h-screen">
+				<Header />
+				<main className="container mx-auto px-3 pb-12 h-4/6">
+					{alert && <Alert />}
+					{children}
+				</main>
+			</div>
 			<Footer />
-		</div>
+		</React.Fragment>
 	);
 };
 export default Page;

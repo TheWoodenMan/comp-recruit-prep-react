@@ -10,7 +10,8 @@ const UserContext = createContext<UserContextType>({} as UserContextType);
 export const UserProvider = ({ children }: UserProviderProps) => {
 	const initialState = {
 		user: false,
-		userName: "",
+		username: "",
+		email: "",
 		avatar_url: react
 	};
 

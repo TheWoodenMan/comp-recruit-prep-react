@@ -9,6 +9,7 @@ export type UserType = {
 export interface UserContextType {
 	user: boolean;
 	username: string;
+	email: string;
 	avatar_url: string;
 	dispatch: Dispatch;
 }

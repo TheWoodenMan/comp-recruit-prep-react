@@ -26,8 +26,6 @@ const Login = () => {
 		}
 	};
 
-	const loginInput = document.getElementById("loginInput");
-
 	return (
 		<div>
 			<div className="container flex mt-10 ml-20">
@@ -42,18 +40,26 @@ const Login = () => {
 					</Button>
 				</div>
 				<div className="right w-50 pr-20 py-5 shadow-md ml-20">
-					<form action="submit" onSubmit={handleSubmit}>
+					<form action="/login" onSubmit={handleSubmit}>
 						<div className="flex flex-col ml-20 w-96 lg-w-5/6">
 							<div className="py-3">
 								<Input
-									id="loginInput"
+									id="email"
+									name="email"
 									onChange={handleChange}
-									label="enter username"
+									label="enter email"
 									className="input"
+									required
 								/>
 							</div>
 							<div className="pb-3">
-								<Input id="password" label="enter password" className="input" />
+								<Input
+									id="password"
+									type="password"
+									label="enter password"
+									className="input"
+									required
+								/>
 							</div>
 							<Button
 								type="submit"
