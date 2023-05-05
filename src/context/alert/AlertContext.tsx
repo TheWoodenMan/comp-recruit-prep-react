@@ -1,3 +1,4 @@
+import React from "react";
 import { createContext, useReducer } from "react";
 import alertReducer from "./AlertReducer";
 import { AlertProviderProps } from "./AlertContextTypes";

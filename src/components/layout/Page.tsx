@@ -16,11 +16,13 @@ const Page: React.FC<PageProps> = ({ children }) => {
 
 	return (
 		<React.Fragment>
-			<Header />
-			<main className="container mx-auto px-3 pb-12 bg-slate-500 h-4/6">
-				{alert && <Alert />}
-				{children}
-			</main>
+			<div className="h-screen">
+				<Header />
+				<main className="container mx-auto px-3 pb-12 h-4/6">
+					{alert && <Alert />}
+					{children}
+				</main>
+			</div>
 			<Footer />
 		</React.Fragment>
 	);

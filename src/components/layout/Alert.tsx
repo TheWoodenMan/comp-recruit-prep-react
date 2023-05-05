@@ -5,16 +5,16 @@ import AlertContext from "../../context/alert/AlertContext";
 const Alert: React.FC = () => {
 	const alertContextType = useContext(AlertContext);
 	// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-	const alert = alertContextType!.alert || { type: "", msg: "" };
+	const { type, msg } = alertContextType!.alert || { type: "", msg: "" };
 	return (
 		<div
 			className={
-				alert.type === "error"
+				type === "error"
 					? "flex items-start mb-4 px-2 py-2 mt-5 bg-red-300/50 rounded space-x-2 alert alert-warning shadow-lg text-base-300"
 					: ""
 			}
 		>
-			{alert.type === "error" && (
+			{type === "error" && (
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
@@ -31,7 +31,7 @@ const Alert: React.FC = () => {
 				</svg>
 			)}
 			<p className="flex-1 text-base font-semibold leading-7 text-neutral-focus">
-				<strong>{alert.msg}</strong>
+				<strong>{msg}</strong>
 			</p>
 		</div>
 	);

@@ -36,10 +36,10 @@ const QuestionSearch = () => {
 
 	return (
 		<div className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 mb-8 mt-5 gap-8 ml-8">
-			<div>
+			<div className="ml-5 lg:ml-0">
 				<form action="submit" onSubmit={handleSubmit}>
 					<div className="form-control">
-						<div className="flex flex-col md:flex-row md-w-5/6">
+						<div className="flex flex-col ml-20 w-96 lg:ml-3 lg:flex-row lg-w-5/6">
 							<Input
 								label="Search by value"
 								className="input"
@@ -48,14 +48,14 @@ const QuestionSearch = () => {
 							/>
 							<Button
 								type="submit"
-								className="btn btn-lg mt-5 md:mt-0 md:mx-5 md:pr-5 lg:pr-10"
+								className="btn btn-lg mt-5 lg:mt-0 lg:mx-5 md:pr-5 lg:pr-6"
 							>
 								Submit
 							</Button>
 							{questions && questions.length > 0 && (
 								<button
 									onClick={() => dispatch({ type: "CLEAR_QUESTIONS" })}
-									className="btn btn-ghost btn-lg mt-5 md:mt-0 md:ml-5"
+									className="btn btn-ghost btn-lg mt-5 lg:mt-0 lg:ml-5"
 								>
 									Clear
 								</button>
