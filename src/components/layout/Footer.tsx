@@ -1,15 +1,16 @@
+import React from "react";
 import { Typography } from "@material-tailwind/react";
 import { SiGunicorn, SiTelegraph } from "react-icons/si";
 import { FaTwitterSquare, FaGithub } from "react-icons/fa";
+import { IconContext } from "react-icons";
 
 export default function Footer() {
 	return (
 		<footer className="w-full p-8">
 			<div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 bg-white text-center md:justify-between">
-				<SiGunicorn
-					stroke={{ color: "blue-gray" }}
-					fill={{ color: "blue-gray" }}
-				/>
+				<IconContext.Provider value={{ color: "blue-gray" }}>
+					<SiGunicorn />
+				</IconContext.Provider>
 				<ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
 					<li>
 						<Typography

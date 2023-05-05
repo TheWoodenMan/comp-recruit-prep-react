@@ -15,7 +15,6 @@ export default function Example() {
 	const UserSearchContext = useContext(UserContext);
 
 	const { user, avatar_url, username } = UserSearchContext;
-	console.log(avatar_url);
 
 	const [openNav, setOpenNav] = useState(false);
 
@@ -86,18 +85,24 @@ export default function Example() {
 					src={avatar_url}
 				/>
 			)}
-			{user && (
-				<Typography
-					as="li"
-					variant="small"
-					color="blue-gray"
-					className="p-1 font-normal"
-				>
-					<a href="logout" className="flex items-center mr-3">
-						Logout
-					</a>
-				</Typography>
-			)}
+
+			<Typography
+				as="li"
+				variant="small"
+				color="blue-gray"
+				className="p-1 font-normal"
+			>
+				{window.innerWidth >= 960 &&
+					(user ? (
+						<a href="logout" className="flex items-center mr-3">
+							Logout
+						</a>
+					) : (
+						<a href="login" className="flex items-center mr-3">
+							Login
+						</a>
+					))}
+			</Typography>
 		</ul>
 	);
 
@@ -158,7 +163,7 @@ export default function Example() {
 				<div className="container mx-auto">
 					{navList}
 					<Button variant="gradient" size="sm" fullWidth className="mb-2">
-						<a href="login">Login</a>
+						{user ? <a href="logout">Logout</a> : <a href="login">Login</a>}
 					</Button>
 				</div>
 			</MobileNav>
