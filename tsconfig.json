@@ -25,5 +25,7 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": ["client"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "allowSyntheticDefaultImports": true,
+  "esModuleInterop": true
 }

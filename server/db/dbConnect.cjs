@@ -1,7 +1,7 @@
-import mongoose from "mongoose";
-import 'dotenv/config'
+const mongoose = require ("mongoose")
+require("dotenv").config({ path: "server/config/.env" });
 
-export default async function dbConnect() {
+const dbConnect = async function () {
     // use mongoose to connect this app to our database on mongoDB using the DB_URL (connection string)
     mongoose
       .connect(
@@ -20,3 +20,5 @@ export default async function dbConnect() {
         console.error(error);
       });
   }
+
+module.exports = dbConnect
