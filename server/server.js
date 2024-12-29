@@ -2,6 +2,10 @@ import express from 'express'
 import path from 'path'
 import cors from 'cors'
 import 'dotenv/config'
+import  dbConnect  from "./db/dbConnect.js"
+
+// Connect to mongodb
+dbConnect()
 
 // // this replicates the functionality of __dirname
 // import { fileURLToPath } from 'url'
