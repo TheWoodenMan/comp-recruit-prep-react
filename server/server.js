@@ -1,6 +1,7 @@
 import express from 'express'
 import path from 'path'
 import cors from 'cors'
+import 'dotenv/config'
 
 // // this replicates the functionality of __dirname
 // import { fileURLToPath } from 'url'
@@ -9,17 +10,11 @@ import cors from 'cors'
 
 // express setup
 const app = express()
-const port = 9000
+const port = process.env.SERVER_PORT
 
 // express middleware
 app.use(express.static('public'))
 app.use(cors())
-
-app.get('/', (req, res) => {
-  const request = req
-  console.log(request)
-  res.sendFile(path.join(__dirname, 'index.html'))
-})
 
 app.get('/works', (req, res) => {
   res.send('GET request works')
