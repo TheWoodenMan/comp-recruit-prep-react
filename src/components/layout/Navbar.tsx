@@ -82,8 +82,7 @@ export default function Example () {
           size='sm'
           variant='circular'
           color='blue-gray'
-          src={avatar_url}
-        />
+          src={avatar_url} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}        />
       )}
 
       <Typography
@@ -107,7 +106,7 @@ export default function Example () {
   )
 
   return (
-    <Navbar className='mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4'>
+    <Navbar className='mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4' placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
       <div className='container mx-auto flex items-center justify-between text-blue-gray-900'>
         <Typography
           as='a'
@@ -118,15 +117,14 @@ export default function Example () {
           <span>Competency Recruitment Prepper</span>
         </Typography>
         <div className='hidden lg:block'>{navList}</div>
-        <Button variant='gradient' size='sm' className='hidden lg:inline-block'>
+        <Button variant='gradient' size='sm' className='hidden lg:inline-block' placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
           <a href='login'>Login</a>
         </Button>
         <IconButton
           variant='text'
           className='ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden'
           ripple={false}
-          onClick={() => setOpenNav(!openNav)}
-        >
+          onClick={() => setOpenNav(!openNav)} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}        >
           {openNav ? (
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -162,7 +160,7 @@ export default function Example () {
       <MobileNav open={openNav}>
         <div className='container mx-auto'>
           {navList}
-          <Button variant='gradient' size='sm' fullWidth className='mb-2'>
+          <Button variant='gradient' size='sm' fullWidth className='mb-2' placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
             {user ? <a href='logout'>Logout</a> : <a href='login'>Login</a>}
           </Button>
         </div>

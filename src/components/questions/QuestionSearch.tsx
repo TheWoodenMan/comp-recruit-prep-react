@@ -44,12 +44,10 @@ const QuestionSearch = () => {
 								label="Search by value"
 								className="input"
 								value={text}
-								onChange={handleChange}
-							/>
+								onChange={handleChange} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} crossOrigin={undefined}							/>
 							<Button
 								type="submit"
-								className="btn btn-lg mt-5 lg:mt-0 lg:mx-5 md:pr-5 lg:pr-6"
-							>
+								className="btn btn-lg mt-5 lg:mt-0 lg:mx-5 md:pr-5 lg:pr-6" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}							>
 								Submit
 							</Button>
 							{questions && questions.length > 0 && (

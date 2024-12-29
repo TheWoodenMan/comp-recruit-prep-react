@@ -1,5 +1,5 @@
 // express setup
-const express = require("express")
+import express from "express";
 const app = express()
 
 require("dotenv").config({ path: "server/config/.env" });
@@ -10,13 +10,13 @@ require("dotenv").config({ path: "server/config/.env" });
 // import cors from 'cors'
 // app.use(cors())
 
-const bodyParser = require('body-parser')
-const logger = require("morgan")
+import bodyParser from 'body-parser';
+import logger from "morgan";
 
 // import _default from '@storybook/addon-styling';
 
 // Connect to mongodb
-const dbConnect = require("./db/dbConnect.cjs")
+import dbConnect from "./db/dbConnect.js";
 dbConnect()
 
 // Curb Cores Error by adding a header here
@@ -46,10 +46,10 @@ app.use(express.static('public'))
 
 // User Routes
 
-const userRoutes = require("./routes/user.cjs");
+import userRoutes from "./routes/user.js";
 app.use("/api/user", userRoutes);
 
-const authRoutes = require("./routes/auth.cjs")
+import authRoutes from "./routes/auth.js";
 app.use("/api/auth", authRoutes);
 
 app.get('/works', (req, res) => {

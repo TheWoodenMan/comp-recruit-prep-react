@@ -1,10 +1,9 @@
-const mongoose = require ("mongoose")
+import { connect } from "mongoose";
 require("dotenv").config({ path: "server/config/.env" });
 
 const dbConnect = async function () {
     // use mongoose to connect this app to our database on mongoDB using the DB_URL (connection string)
-    mongoose
-      .connect(
+    connect(
           process.env.DB_URL,
         {
           //   these are options to ensure that the connection is done properly
@@ -21,4 +20,4 @@ const dbConnect = async function () {
       });
   }
 
-module.exports = dbConnect
+export default dbConnect
